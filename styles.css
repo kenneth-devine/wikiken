@@ -1,0 +1,144 @@
+/* THEMES */
+
+:root {
+  --bg: #000000;
+  --text: #ffffff;
+  --accent: #cc0000;
+  --bg-secondary: #000000;
+  --border: #ffffff;
+  --topbar-height: 40px;
+  --font: 'JetBrains Mono', monospace;
+}
+
+body.theme-dark {
+  --bg: #000000;
+  --text: #ffffff;
+  --accent: #cc0000;
+  --bg-secondary: #000000;
+  --border: #ffffff;
+}
+
+body.theme-light {
+  --bg: #ffffff;
+  --text: #111111;
+  --accent: #0055ff;
+  --bg-secondary: #ffffff;
+  --border: #000000;
+}
+
+/* TOPBAR */
+
+#topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--topbar-height);
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-sizing: border-box;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#topbar-title {
+  font-family: var(--font);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#topbar-title:hover {
+  color: var(--accent);
+}
+
+#topbar-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.topbar-btn {
+  background: none;
+  border: 1px solid var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1rem;
+  padding: 3px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.15s, color 0.15s;
+  
+  line-height: 1;
+}
+
+.topbar-btn:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+/* BODY & CONTENT */
+
+body {
+  font-family: var(--font);
+  max-width: 750px;
+  margin: 0 auto;
+  padding: calc(var(--topbar-height) + 24px) 15px 40px;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.35;
+  accent-color: var(--accent);
+}
+
+a:link {
+  color: var(--accent);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: var(--accent);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--text);
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: var(--accent);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-family: var(--font);
+}
+
+code {
+  background: var(--bg-secondary);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+pre code {
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding-left: 1em;
+  color: var(--text);
+
+}
