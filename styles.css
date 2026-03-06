@@ -53,6 +53,10 @@ body.theme-light {
   color: var(--text);
   text-decoration: none;
   cursor: pointer;
+  color: var(--accent);
+  background-color: var(--bg);
+  text-shadow: 0 0 10px var(--accent); /* 0px horizontal/vertical offset, 10px blur, white color */
+
 }
 
 #topbar-title:hover {
@@ -140,5 +144,6 @@ blockquote {
   margin-left: 0;
   padding-left: 1em;
   color: var(--text);
+
 
 }
